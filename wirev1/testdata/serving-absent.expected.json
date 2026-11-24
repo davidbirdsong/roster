@@ -1,0 +1,10 @@
+{
+  "owner": "c1",
+  "service": "g",
+  "endpoints": [
+    {"OwnerID": "c1", "Service": "g", "LogicalName": "a", "InstanceID": "a", "Address": "10.0.0.1", "Port": 80, "Protocol": "http", "State": "READY", "Serving": true},
+    {"OwnerID": "c1", "Service": "g", "LogicalName": "b", "InstanceID": "b", "Address": "10.0.0.2", "Port": 80, "Protocol": "http", "State": "TERMINATING", "Serving": false},
+    {"OwnerID": "c1", "Service": "g", "LogicalName": "c", "InstanceID": "c", "Address": "10.0.0.3", "Port": 80, "Protocol": "http", "State": "NOT_READY", "Serving": false}
+  ],
+  "rejected": []
+}

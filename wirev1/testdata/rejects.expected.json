@@ -1,0 +1,15 @@
+{
+  "owner": "c1",
+  "service": "g",
+  "endpoints": [
+    {"OwnerID": "c1", "Service": "g", "LogicalName": "ok", "InstanceID": "ok", "Address": "10.0.0.1", "Port": 80, "Protocol": "http", "State": "READY", "Serving": true}
+  ],
+  "rejected": [
+    {"index": 1, "instance_id": "bad-state"},
+    {"index": 2, "instance_id": "bad-protocol"},
+    {"index": 3, "instance_id": "bad-port"},
+    {"index": 4, "instance_id": "no-state"},
+    {"index": 5, "instance_id": "ok"},
+    {"index": 6, "instance_id": "no-sni"}
+  ]
+}

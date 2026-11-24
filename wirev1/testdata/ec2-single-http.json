@@ -1,0 +1,16 @@
+{
+  "writer": "roster-ec2-publisher/0.1.0",
+  "endpoints": [
+    {
+      "instance_id": "i-0abc",
+      "logical_name": "i-0abc",
+      "address": "10.0.1.5",
+      "port": 8080,
+      "protocol": "http",
+      "region": "us-east-1",
+      "zone": "us-east-1a",
+      "state": "READY",
+      "serving": true
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "writer": "some-future-publisher/9.0.0",
+  "published_by_team": "networking",
+  "endpoints": [
+    {
+      "instance_id": "a",
+      "logical_name": "a",
+      "address": "10.0.0.1",
+      "port": 80,
+      "protocol": "http",
+      "state": "READY",
+      "serving": true,
+      "weight": 5,
+      "zone_hint": {"preferred": ["x", "y"], "strict": false}
+    }
+  ]
+}

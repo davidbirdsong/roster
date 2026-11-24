@@ -1,0 +1,11 @@
+{
+  "endpoints": [
+    {"instance_id": "ok", "logical_name": "ok", "address": "10.0.0.1", "port": 80, "protocol": "http", "state": "READY", "serving": true},
+    {"instance_id": "bad-state", "logical_name": "x", "address": "10.0.0.2", "port": 80, "protocol": "http", "state": "DRAINING"},
+    {"instance_id": "bad-protocol", "logical_name": "x", "address": "10.0.0.3", "port": 80, "protocol": "grpc", "state": "READY"},
+    {"instance_id": "bad-port", "logical_name": "x", "address": "10.0.0.4", "port": 0, "protocol": "http", "state": "READY"},
+    {"instance_id": "no-state", "logical_name": "x", "address": "10.0.0.5", "port": 80, "protocol": "http"},
+    {"instance_id": "ok", "logical_name": "dup", "address": "10.0.0.6", "port": 80, "protocol": "http", "state": "READY"},
+    {"instance_id": "no-sni", "logical_name": "x", "address": "10.0.0.7", "port": 443, "protocol": "https", "state": "READY"}
+  ]
+}

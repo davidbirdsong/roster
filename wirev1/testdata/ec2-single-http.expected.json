@@ -1,0 +1,8 @@
+{
+  "owner": "i-0abc",
+  "service": "web",
+  "endpoints": [
+    {"OwnerID": "i-0abc", "Service": "web", "LogicalName": "i-0abc", "InstanceID": "i-0abc", "Address": "10.0.1.5", "Port": 8080, "Protocol": "http", "Region": "us-east-1", "Zone": "us-east-1a", "State": "READY", "Serving": true}
+  ],
+  "rejected": []
+}

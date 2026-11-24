@@ -1,0 +1,28 @@
+{
+  "writer": "roster-k8s-publisher/0.1.0",
+  "endpoints": [
+    {
+      "instance_id": "pod-1",
+      "logical_name": "shard-a-0",
+      "address": "10.2.0.7",
+      "port": 8443,
+      "protocol": "https",
+      "sni": "ingress.shard-a.example.com",
+      "region": "us-east-1",
+      "zone": "us-east-1b",
+      "state": "READY",
+      "serving": true,
+      "labels": {"shard": "a", "tier": "ingress"}
+    },
+    {
+      "instance_id": "pod-0",
+      "logical_name": "shard-a-0",
+      "address": "10.2.0.6",
+      "port": 8443,
+      "protocol": "https",
+      "sni": "ingress.shard-a.example.com",
+      "state": "TERMINATING",
+      "serving": true
+    }
+  ]
+}

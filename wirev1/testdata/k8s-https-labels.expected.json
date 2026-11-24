@@ -1,0 +1,9 @@
+{
+  "owner": "eks-a",
+  "service": "shard-a",
+  "endpoints": [
+    {"OwnerID": "eks-a", "Service": "shard-a", "LogicalName": "shard-a-0", "InstanceID": "pod-0", "Address": "10.2.0.6", "Port": 8443, "Protocol": "https", "SNI": "ingress.shard-a.example.com", "State": "TERMINATING", "Serving": true},
+    {"OwnerID": "eks-a", "Service": "shard-a", "LogicalName": "shard-a-0", "InstanceID": "pod-1", "Address": "10.2.0.7", "Port": 8443, "Protocol": "https", "SNI": "ingress.shard-a.example.com", "Region": "us-east-1", "Zone": "us-east-1b", "State": "READY", "Serving": true, "Labels": {"shard": "a", "tier": "ingress"}}
+  ],
+  "rejected": []
+}

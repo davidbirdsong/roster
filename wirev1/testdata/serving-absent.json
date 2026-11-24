@@ -1,0 +1,7 @@
+{
+  "endpoints": [
+    {"instance_id": "a", "logical_name": "a", "address": "10.0.0.1", "port": 80, "protocol": "http", "state": "READY"},
+    {"instance_id": "b", "logical_name": "b", "address": "10.0.0.2", "port": 80, "protocol": "http", "state": "TERMINATING"},
+    {"instance_id": "c", "logical_name": "c", "address": "10.0.0.3", "port": 80, "protocol": "http", "state": "NOT_READY"}
+  ]
+}
