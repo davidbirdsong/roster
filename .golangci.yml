@@ -1,0 +1,46 @@
+# golangci-lint v2 config for the roster module. These rules keep the dependency graph of the library small:
+# an importer of the root package pays for the standard library alone, and storage and test doubles live in
+# subpackages that an importer opts into.
+version: "2"
+
+linters:
+  enable:
+    - depguard
+  settings:
+    depguard:
+      rules:
+        # The root package depends on the standard library alone.
+        roster-root:
+          files: ["!**/wirev1/**", "!**/s3store/**", "!**/rostertest/**", "!**/policy/**", "!$test"]
+          list-mode: strict
+          allow:
+            - $gostd
+        # The wire format knows the model and nothing else.
+        wirev1:
+          files: ["**/wirev1/**", "!$test"]
+          list-mode: strict
+          allow:
+            - $gostd
+            - github.com/davidbirdsong/roster
+        # Consumer policy helpers know the model and nothing else.
+        policy:
+          files: ["**/policy/**", "!$test"]
+          list-mode: strict
+          allow:
+            - $gostd
+            - github.com/davidbirdsong/roster
+        # Test doubles need nothing a consumer would not already have.
+        rostertest:
+          files: ["**/rostertest/**", "!$test"]
+          list-mode: strict
+          allow:
+            - $gostd
+            - github.com/davidbirdsong/roster
+        # The S3 layer is the only code that knows the bucket layout, and the only one that uses the AWS SDK.
+        s3store:
+          files: ["**/s3store/**", "!$test"]
+          list-mode: strict
+          allow:
+            - $gostd
+            - github.com/davidbirdsong/roster
+            - github.com/aws/aws-sdk-go-v2
